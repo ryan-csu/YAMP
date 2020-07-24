@@ -900,7 +900,7 @@ process profileFunction {
  	echo \" \" >> .log.9
 
 	#Defines HUMAnN2 command taking advantages of the MetaPhlAn2's results
-	CMD=\"humann2 --input $cleanreads --output . --output-basename ${params.prefix} --taxonomic-profile $metaphlanbuglist --nucleotide-database $chocophlan --protein-database $uniref --pathways metacyc --threads ${task.cpus} --memory-use minimum\"
+	CMD=\"humann2 --input $cleanreads --output . --output-basename ${params.prefix} --taxonomic-profile $metaphlanbuglist --nucleotide-database $chocophlan --protein-database $uniref --pathways metacyc --threads ${task.cpus} --memory-use maximum\"
 	
 	#Logs version of the software and executed command
 	#HUMAnN2 prints on stderr
